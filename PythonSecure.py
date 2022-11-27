@@ -1,12 +1,13 @@
+from datetime import datetime
 import requests
 import base64
 import json
 from phpserialize import unserialize
 from Crypto.Cipher import AES
+
 APP_SECRET_KEY="###############" #App Secret key
 APP_API_LINK="https://api.autho.app/app/auth/###############" #App Api Link
 
-from datetime import datetime
 def DecryptEndToEnd(AppKey,cipher):
     key = bytes(base64.b64decode(AppKey))
     enc_pass = cipher
